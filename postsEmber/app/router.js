@@ -7,6 +7,13 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+	this.resource('posts', 
+		{ path : 'posts'}, 
+		function(){
+			this.route('new', {path: 'new'});
+		});
+
+	this.route('proyectos');
 });
 
 export default Router;
