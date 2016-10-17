@@ -1,13 +1,29 @@
 <!-- Vista para un nuevo post-->
-<div id="newTitulo"></div>
-<div id="newDescripcion"></div>
-<div id="newProyecto"></div>
-<div id="newRespuesta"></div>
+<div class="ui form">
+  <div class="fields">
+    <div class="field">
+      <label>First name</label>
+      <input placeholder="First Name" type="text">
+    </div>
+    <div class="field">
+      <label>Middle name</label>
+      <input placeholder="Middle Name" type="text">
+    </div>
+    <div class="field">
+      <label>Last name</label>
+      <input placeholder="Last Name" type="text">
+    </div>
+  </div>
+</div>
 
 <div id="botonera">
-	<div id="aceptar">aca va el boton aceptar</div>
-	<div id ="cancelar"></div>
+	<div id="aceptar">
+		{{input type="button" enter="save" class="ui button" value=model}} 
+	</div>
+	<div id ="cancelar">
+		{{input type="button" enter="save" class="ui button" value="cancel"}} 
+	</div>
 </div>
 
 
-{{input type="button" action="save" value="Ir a proyectos"}}
+

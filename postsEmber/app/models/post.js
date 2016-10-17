@@ -5,6 +5,8 @@ export default DS.Model.extend({
 	descripcion: DS.attr('string'),
 	proyecto: DS.belongsTo('proyecto'),
 	respuesta: DS.attr('string'),
-	fxAlta: DS.attr('date'),
+	fxAlta: DS.attr('date', {
+   		defaultValue() { return new Date(); }
+  	}),
 	fxCompletado: DS.attr('date')
 });

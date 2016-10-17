@@ -6,6 +6,6 @@ export default Ember.Route.extend({
 		"Huertas",
 		"Reciclaje",
 		"Hogares",
-		"Sistemas (a.k.a Informatica)"]
+		"Sistemas (a.k.a Informatica)"];
 	}	
 });
