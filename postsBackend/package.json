@@ -19,9 +19,11 @@
     "grunt-sails-linker": "~0.10.1",
     "grunt-sync": "0.5.2",
     "include-all": "^1.0.0",
+    "lodash": "^4.16.4",
     "rc": "1.0.1",
     "sails": "~0.12.7",
-    "sails-disk": "~0.10.9"
+    "sails-disk": "~0.10.9",
+    "sails-generate-ember-blueprints": "0.0.9"
   },
   "scripts": {
     "debug": "node debug app.js",
@@ -34,7 +36,5 @@
   },
   "author": "anonymous node/sails user",
   "license": "",
-  "devDependencies": {
-    "ember-data-sails": "0.0.17"
-  }
+  "devDependencies": {}
 }
