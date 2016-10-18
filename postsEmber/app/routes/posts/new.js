@@ -7,7 +7,7 @@ export default Ember.Route.extend({
 	actions: {
 		save: function() {
 			var route = this;
-			route.transitionTo('posts');
+			route.transitionTo('proyectos');
 		}
 	}
 });

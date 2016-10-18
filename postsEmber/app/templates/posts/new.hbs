@@ -1,29 +1,46 @@
-<!-- Vista para un nuevo post-->
+<!-- Nuevo post posts/new
+Model: models/post.js
+titulo: DS.attr('string'),
+	descripcion: DS.attr('string'),
+	proyecto: DS.belongsTo('proyecto'),
+	respuesta: DS.attr('string'),
+	fxAlta: DS.attr('date', {
+   		defaultValue() { return new Date(); }
+  	}),
+	fxCompletado: DS.attr('date')-->
+
 <div class="ui form">
   <div class="fields">
     <div class="field">
-      <label>First name</label>
-      <input placeholder="First Name" type="text">
+      <label>Titulo</label>
+      <input placeholder="Titulo" type="text">
     </div>
     <div class="field">
-      <label>Middle name</label>
-      <input placeholder="Middle Name" type="text">
+      <label>descripcion</label>
+      <input placeholder="descripcion" type="text">
     </div>
     <div class="field">
-      <label>Last name</label>
-      <input placeholder="Last Name" type="text">
+      <label>proyecto</label>
+      <input placeholder="proyecto" type="combo">
+    </div>
+    <div class="field">
+      <label>respuesta</label>
+      <input placeholder="respuesta" type="text">
+    </div>
+    <div class="field">
+      <label>fxAlta</label>
+      <input placeholder="fxAlta" type="date">
     </div>
   </div>
 </div>
 
 <div id="botonera">
-	<div id="aceptar">
-		{{input type="button" enter="save" class="ui button" value=model}} 
-	</div>
-	<div id ="cancelar">
-		{{input type="button" enter="save" class="ui button" value="cancel"}} 
-	</div>
+        {{input type="button" enter="save" class="ui button" value=model}} 
+    {{#link-to 'posts'}}
+        {{input type="button" class="ui button" value="cancel"}} 
+    {{/link-to}}
+<br />    
+    {{#link-to 'proyectos'}}
+        {{input type="button" class="ui button" value="Ir a Proyectos"}} 
+    {{/link-to}}    
 </div>
-
-
-
