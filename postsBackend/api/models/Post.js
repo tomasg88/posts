@@ -7,8 +7,33 @@
 
 module.exports = {
 
-  attributes: {
-
-  }
+    tableName: 'post',
+    attributes: {
+      titulo: {
+          type: 'string',
+          required: true,
+          maxLength: 45
+      },
+      descripcion: {
+          type: 'string',
+          maxLength: 900
+      },
+      respuesta: {
+          type: 'string',
+          maxLength: 450
+      },
+      proyecto: {
+          type: 'int'
+      },
+      fxAlta: {
+          type: 'date',
+          required: true,
+          defaultsTo: new Date(0)
+      },
+      fxCompletado: {
+          type: 'date',
+          //maxLength: 45
+      }
+    }
 };
 

@@ -2,12 +2,12 @@
 <ul>
 	{{#each model as |proyecto|}}
 		<li>
-			<h5>{{proyecto}}</h5>
+			<h5>{{proyecto.nombre}}</h5>
 		</li>
 	{{/each}}	
 </ul>
 
-{{#link-to 'posts'}}
-    {{input type="button" class="ui button" value="Ver Posts"}} 
+{{#link-to 'posts' class="ui button" }}
+    Ver Posts
 {{/link-to}}
  

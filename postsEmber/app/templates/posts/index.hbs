@@ -1,10 +1,15 @@
 <h1>POSTS INDEX</h1>
-<ul>
 {{#each model as |post|}}
-	<li>{{post}}</li>
+    <ul>
+        <li>{{post.titulo}}</li>
+        <li>{{post.descripcion}}</li>
+        <li>{{post.respuesta}}</li>
+        <li>{{post.proyecto}}</li>
+    </ul>
 {{/each}}
-</ul>
 
-{{#link-to 'posts.new'}}
-    {{input type="button" class="ui button" value="Nuevo"}} 
+{{#link-to 'posts.new' class="ui button"}}
+    Nuevo
 {{/link-to}}
+
+{{outlet}}

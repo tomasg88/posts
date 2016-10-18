@@ -1,13 +1,6 @@
 <!-- Nuevo post posts/new
-Model: models/post.js
-titulo: DS.attr('string'),
-	descripcion: DS.attr('string'),
-	proyecto: DS.belongsTo('proyecto'),
-	respuesta: DS.attr('string'),
-	fxAlta: DS.attr('date', {
-   		defaultValue() { return new Date(); }
-  	}),
-	fxCompletado: DS.attr('date')-->
+    Model: models/post.js
+-->
 
 <div class="ui form">
   <div class="fields">
@@ -35,12 +28,12 @@ titulo: DS.attr('string'),
 </div>
 
 <div id="botonera">
-        {{input type="button" enter="save" class="ui button" value=model}} 
-    {{#link-to 'posts'}}
-        {{input type="button" class="ui button" value="cancel"}} 
+    {{input type="button" enter="save" class="ui button" value=model}} 
+    {{#link-to 'posts' class="ui button" }}
+        cancel
     {{/link-to}}
 <br />    
-    {{#link-to 'proyectos'}}
-        {{input type="button" class="ui button" value="Ir a Proyectos"}} 
+    {{#link-to 'proyectos' class="ui button" }}
+        Ir a Proyectos
     {{/link-to}}    
 </div>
