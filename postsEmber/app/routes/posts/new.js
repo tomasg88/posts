@@ -14,10 +14,10 @@ export default Ember.Route.extend({
 				console.log('Failed to save the model');
 			});
 		},
-		remove: function(model) {
-	      if(confirm('Are you sure?')) {
-	        model.destroyRecord();
-	      }
-	    }
+        willTransition() {
+            // rollbackAttributes() removes the record from the store
+            // if the model 'isNew'
+            this.controller.get('model').rollbackAttributes();
+        }
 	}
 });
