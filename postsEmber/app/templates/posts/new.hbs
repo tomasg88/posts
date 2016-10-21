@@ -2,36 +2,34 @@
     Model: models/post.js
 -->
 
-<div class="ui form">
+<form class="ui large form" {{action "save" on="submit"}}>
   <div class="fields">
     <div class="field">
       <label>Titulo</label>
-      <input placeholder="Titulo" type="text">
+      {{input placeholder="Titulo" type="text" value=model.titulo}}
     </div>
     <div class="field">
       <label>descripcion</label>
-      <input placeholder="descripcion" type="text">
+      {{input placeholder="descripcion" type="text" value=model.descripcion}}
     </div>
     <div class="field">
       <label>proyecto</label>
-      <input placeholder="proyecto" type="combo">
+      {{input placeholder="proyecto" type="text" value=model.proyecto.nombre}}
     </div>
     <div class="field">
       <label>respuesta</label>
-      <input placeholder="respuesta" type="text">
+      {{input placeholder="respuesta" type="text" value=model.respuesta}}
     </div>
     <div class="field">
       <label>fxAlta</label>
-      <input placeholder="fxAlta" type="date">
+      {{input placeholder="fxAlta" type="text" value=model.fxAlta}}
     </div>
   </div>
-</div>
+  {{input type="submit" class="ui button" value="Guardar"}} 
+</form>
 
 <div id="botonera">
-    {{input type="button" enter="save" class="ui button" value=model}} 
-    {{#link-to 'posts' class="ui button" }}
-        cancel
-    {{/link-to}}
+    {{input type="submit" value="cancel" action='remove' class="ui button" }}
 <br />    
     {{#link-to 'proyectos' class="ui button" }}
         Ir a Proyectos

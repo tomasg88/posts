@@ -6,6 +6,7 @@ export default Ember.Route.extend({
         //return this.get('store').findAll('news');
         //this.replaceWith('proyectos');  
     },
+    
 	model(){
 		//return ["post1", "post2", "post3"];
         return this.get('store').findAll('post');
