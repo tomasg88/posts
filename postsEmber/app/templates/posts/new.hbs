@@ -10,15 +10,15 @@
     </div>
     <div class="field">
       <label>descripcion</label>
-      {{input placeholder="descripcion" type="text" value=model.descripcion}}
+      {{textarea placeholder="descripcion" type="text" value=model.descripcion}}
     </div>
     <div class="field">
       <label>proyecto</label>
-      {{input placeholder="proyecto" type="text" value=model.proyecto.nombre}}
+      {{input placeholder="proyecto" type="text" value=model.proyecto}}
     </div>
     <div class="field">
       <label>respuesta</label>
-      {{input placeholder="respuesta" type="text" value=model.respuesta}}
+      {{textarea placeholder="respuesta" type="text" value=model.respuesta}}
     </div>
     <div class="field">
       <label>fxAlta</label>
@@ -29,7 +29,9 @@
 </form>
 
 <div id="botonera">
-    {{input type="submit" value="cancel" action='remove' class="ui button" }}
+    {{#link-to 'posts' action="remove" class="ui button" }}
+        Cancel
+    {{/link-to}}    
 <br />    
     {{#link-to 'proyectos' class="ui button" }}
         Ir a Proyectos
